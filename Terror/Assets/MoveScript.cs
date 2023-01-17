@@ -6,7 +6,7 @@ public class MoveScript : MonoBehaviour
 {
 
 	private Vector3 position;
-	public CharacterController keyboard;
+	public Rigidbody keyboard;
 
 	public Joystick stick;
 	public float speed = 10f;
@@ -14,6 +14,13 @@ public class MoveScript : MonoBehaviour
 	public float jumpSpeed = 30f;
 	public int jumpCount;
 	public int jumpMax = 2;
+
+	public Transform groundCheck;
+	public float groundDistance = 0.4f;
+	public LayerMask groundMask;
+	
+	private Vector3 velocity;
+	bool isGrounded;
 
 	
 	
@@ -24,12 +31,22 @@ public class MoveScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		keyboard = GetComponent<CharacterController>();
+		keyboard = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
+		playerMovements();
+		
+		/*isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+		
+
+		if (isGrounded && velocity.y < 0)
+		{
+			velocity.y = -8f;
+		}
+		
 		float x = stick.Horizontal;
 		float y = stick.Vertical;
 		
@@ -38,6 +55,8 @@ public class MoveScript : MonoBehaviour
 		position.x = speed * stick.Horizontal;
 		Vector3 move = transform.right * x + transform.forward * y;
 		position.y -= gravity;
+
+		
 		/*if (Input.GetAxis("Horizontal")> 0)
 		{
 			Vector3 newScale = new Vector3(1,1,1);
@@ -55,7 +74,7 @@ public class MoveScript : MonoBehaviour
 			Vector3 newScale = new Vector3(1, 1, 1);
 			transform.localScale = newScale;
 		}
-		*/
+		#1#
 
 		/*if (Input.GetButtonDown("Jump")&& jumpCount < jumpMax)
 		{
@@ -77,8 +96,17 @@ public class MoveScript : MonoBehaviour
 		{
 			position.y = 0;
 			jumpCount = 0;
-		}*/
-		keyboard.Move(move * speed * Time.deltaTime);
+		}#1#
+		keyboard.Move(move * speed * Time.deltaTime);*/
 
+	}
+
+	void playerMovements()
+	{
+		float horizontalInput = Input.GetAxis("Horizontal");
+		float verticalInput = Input.GetAxis("Vertical");
+		
+		keyboard.AddForce(Vector3.forward * speed * stick.Vertical);
+		keyboard.AddForce(Vector3.right * speed * stick.Horizontal);
 	}
 }
