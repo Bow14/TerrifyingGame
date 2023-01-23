@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NavMesh : MonoBehaviour
+[RequireComponent(typeof(NavMeshAgent))]
+public class AgentBehaviour : MonoBehaviour
 {
-
     private NavMeshAgent agent;
-
+    //Anthony romrell nav mesh agent scripting vids
     public Transform player;
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         agent.destination = player.position;
     }
