@@ -5,8 +5,7 @@ using UnityEngine;
 public class CameraControls : MonoBehaviour
 {
     public Joystick stick;
-    public float horizontalInput = Input.GetAxis("Horizontal");
-    public float verticalInput = Input.GetAxis("Vertical");
+    
 
     public Rigidbody camera;
     public float speed;
@@ -20,9 +19,11 @@ public class CameraControls : MonoBehaviour
 
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
     }
     
 
@@ -35,6 +36,8 @@ public class CameraControls : MonoBehaviour
         //cameraObject.transform.rotation;
 
         transform.position = player.transform.position + offset;
+        
+        
 
 
     }

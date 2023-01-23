@@ -18,6 +18,8 @@ public class MoveScript : MonoBehaviour
 	
 	private Vector3 velocity;
 	bool isGrounded;
+	//public Rigidbody camera;
+
 
 	
 	
@@ -25,6 +27,7 @@ public class MoveScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+
 		keyboard = GetComponent<Rigidbody>();
 	}
 	
