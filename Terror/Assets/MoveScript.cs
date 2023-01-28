@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Versioning;
 using UnityEngine;
 
 public class MoveScript : MonoBehaviour
 {
 
-	private Vector3 position;
-	public Rigidbody keyboard;
+	//private Vector3 position;
+	public Rigidbody player;
 
 	public Joystick stick;
 	public float speed = 10f;
@@ -18,6 +19,8 @@ public class MoveScript : MonoBehaviour
 	
 	private Vector3 velocity;
 	bool isGrounded;
+
+	
 	//public Rigidbody camera;
 
 
@@ -28,22 +31,27 @@ public class MoveScript : MonoBehaviour
 	void Start ()
 	{
 
-		keyboard = GetComponent<Rigidbody>();
+		player = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
 		playerMovements();
-		
+	
+
 	}
 
 	void playerMovements()
 	{
 		float horizontalInput = Input.GetAxis("Horizontal");
 		float verticalInput = Input.GetAxis("Vertical");
+
+		player.AddRelativeForce(Vector3.forward * speed * stick.Vertical);
+		player.AddRelativeForce(Vector3.up * speed * stick.Horizontal);
 		
-		keyboard.AddForce(Vector3.forward * speed * stick.Vertical);
-		keyboard.AddForce(Vector3.right * speed * stick.Horizontal);
+		
+		
+
 	}
 }
