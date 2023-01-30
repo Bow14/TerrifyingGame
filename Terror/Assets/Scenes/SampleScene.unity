@@ -4859,17 +4859,32 @@ MonoBehaviour:
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
+  triggerStay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: aab1be2eb9e57be4b993e3776c8c8a18, type: 2}
+        m_TargetAssemblyTypeName: HealthData, Assembly-CSharp
+        m_MethodName: HealthDown
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: aab1be2eb9e57be4b993e3776c8c8a18, type: 2}
         m_TargetAssemblyTypeName: HealthData, Assembly-CSharp
         m_MethodName: HealthDown
-        m_Mode: 4
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7623,14 +7638,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1540172692}
+  playerObj: {fileID: 1540172684}
   stick: {fileID: 252176062}
   speed: 10
-  gravity: 0
-  groundCheck: {fileID: 0}
-  groundDistance: 0.1
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 2147483647
+  healthValue: {fileID: 11400000, guid: aab1be2eb9e57be4b993e3776c8c8a18, type: 2}
 --- !u!54 &1540172692
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7676,6 +7687,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerStay:
     m_PersistentCalls:
       m_Calls: []
   triggerEnterEvent:

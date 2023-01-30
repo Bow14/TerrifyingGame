@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Versioning;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MoveScript : MonoBehaviour
@@ -8,14 +10,12 @@ public class MoveScript : MonoBehaviour
 
 	//private Vector3 position;
 	public Rigidbody player;
+	public GameObject playerObj;
 
 	public Joystick stick;
 	public float speed = 10f;
-	public float gravity = 3f;
 
-	public Transform groundCheck;
-	public float groundDistance = 0.4f;
-	public LayerMask groundMask;
+	public HealthData healthValue;
 	
 	private Vector3 velocity;
 	bool isGrounded;
@@ -53,5 +53,13 @@ public class MoveScript : MonoBehaviour
 		
 		
 
+	}
+
+	public void OnTriggerEnter(Collider other)
+	{
+		if (healthValue.value < 0)
+		{
+			Destroy(playerObj);
+		}
 	}
 }

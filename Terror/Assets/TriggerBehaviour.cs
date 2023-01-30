@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider))]
 public class TriggerBehaviour : MonoBehaviour
 {
-    public UnityEvent triggerEvent, triggerExitEvent;
+    public UnityEvent triggerEvent, triggerExitEvent, triggerStay;
     public UnityEvent triggerEnterEvent;
 
     private void Awake()
@@ -23,4 +24,11 @@ public class TriggerBehaviour : MonoBehaviour
     {
         triggerExitEvent.Invoke();
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        triggerStay.Invoke();
+    }
+    
+    
 }

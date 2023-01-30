@@ -4,19 +4,19 @@ using UnityEngine;
 [CreateAssetMenu]
 public class HealthData : ScriptableObject
 {
-    public float value;
+    public int value;
 
-    public void SetHealth(float num)
+    public void SetHealth(int num)
     {
         value = num;
     }
 
-    public void HealthDown(float num)
+    public void HealthDown(int num)
     {
         value -= num;
     }
 
-    public void HealthUp(float num)
+    public void HealthUp(int num)
     {
         value += num;
     }
@@ -31,4 +31,5 @@ public class HealthData : ScriptableObject
             value = obj.value;
         }
     }
+    
 }
