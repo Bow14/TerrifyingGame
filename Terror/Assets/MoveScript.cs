@@ -48,7 +48,7 @@ public class MoveScript : MonoBehaviour
 		float verticalInput = Input.GetAxis("Vertical");
 
 		player.AddRelativeForce(Vector3.forward * speed * stick.Vertical);
-		player.AddRelativeForce(Vector3.up * speed * stick.Horizontal);
+		player.AddRelativeForce(Vector3.right * speed * stick.Horizontal);
 		
 		
 		
