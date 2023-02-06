@@ -12,12 +12,15 @@ public class TriggerBehaviour : MonoBehaviour
     private void Awake()
     {
         GetComponent<Collider>().isTrigger = true;
+        UIImageBehaviour.SetHealthBarValue(1);
     }
     
     private void OnTriggerEnter(Collider other)
     {
         triggerEvent.Invoke();
         triggerEnterEvent.Invoke();
+        UIImageBehaviour.SetHealthBarValue(UIImageBehaviour.GetHealthBarValue() - 0.2f);
+
     }
 
     private void OnTriggerExit(Collider other)

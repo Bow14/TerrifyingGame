@@ -9,9 +9,8 @@ using UnityEngine.UI;
 
 public class UIImageBehaviour : MonoBehaviour
 {
-    private Image img;
+    /*private Image img;
     public Slider slideBar;
-    public HealthData healthValue;
     //public int health = 10;
     public UnityEvent startEvent;
     
@@ -27,5 +26,30 @@ public class UIImageBehaviour : MonoBehaviour
          startEvent.Invoke();
          img.fillAmount = data.value;
          slideBar.value -= healthValue.value;
-     }
+     }*/
+    //Tested code by me ^
+    private static Image HealthBarImage;
+    public HealthData healthValue;
+
+    
+ //Code my tutor help me get 
+ 
+ 
+    public static void SetHealthBarValue(float value)
+    {
+        HealthBarImage.fillAmount = value;
+        
+    }
+ 
+    public static float GetHealthBarValue()
+    {
+        return HealthBarImage.fillAmount;
+    }
+    
+    private void Start()
+    {
+
+        HealthBarImage = GetComponent<Image>();
+        
+    }
 }
