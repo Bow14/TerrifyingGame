@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5997244545198913446}
   - component: {fileID: 5997244545198913447}
   - component: {fileID: 5997244545198913444}
-  - component: {fileID: 5997244545198913443}
   - component: {fileID: 5997244545198913442}
+  - component: {fileID: 8295356266607362915}
   m_Layer: 0
   m_Name: NavAgent
   m_TagString: Untagged
@@ -110,7 +110,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 20
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -122,19 +122,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5997244545198913443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5997244545198913445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d40dca189802d1b478f39cff80fd68c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 3644911952817513483, guid: c5344c77823b0a5498e44793f4674dba, type: 3}
 --- !u!114 &5997244545198913442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,19 +142,7 @@ MonoBehaviour:
       m_Calls: []
   triggerStay:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: aab1be2eb9e57be4b993e3776c8c8a18, type: 2}
-        m_TargetAssemblyTypeName: HealthData, Assembly-CSharp
-        m_MethodName: HealthDown
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
+      m_Calls: []
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -183,3 +158,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8295356266607362915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5997244545198913445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40dca189802d1b478f39cff80fd68c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5259592221814970504, guid: 981fffcad43389f4289d9679e9dcdc02, type: 3}

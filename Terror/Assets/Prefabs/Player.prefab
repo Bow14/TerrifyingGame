@@ -15,8 +15,6 @@ GameObject:
   - component: {fileID: 3644911952817513482}
   - component: {fileID: 3644911952817513485}
   - component: {fileID: 3644911952817513484}
-  - component: {fileID: 3644911952817513487}
-  - component: {fileID: 3644911952817513486}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -150,42 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraObj: {fileID: 0}
---- !u!114 &3644911952817513487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3644911952817513493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 860ec20c927a43c4aa208035a4c83402, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerStay:
-    m_PersistentCalls:
-      m_Calls: []
-  triggerEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &3644911952817513486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3644911952817513493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6b6d848ad1b4c14c8c31b0882815d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3644911954291250878
 GameObject:
   m_ObjectHideFlags: 0
