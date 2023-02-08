@@ -28,7 +28,7 @@ public class MoveScript : MonoBehaviour
 	
 	
 	// Use this for initialization
-	void Start ()
+	void Awake ()
 	{
 
 		player = GetComponent<Rigidbody>();
