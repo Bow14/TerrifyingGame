@@ -15,4 +15,14 @@ public class FloatData : ScriptableObject
     {
         value += num;
     }
+    public void CompareValue(FloatData obj)
+    {
+        if (value <= obj.value )
+        {
+        }
+        else
+        {
+            value = obj.value;
+        }
+    }
 }
