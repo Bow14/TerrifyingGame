@@ -12,6 +12,12 @@ public class MainMenue : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Loads the next level in the queue
     }
 
+    public void RestartGame()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene("MainMenue");
+    }
+
     public void QuitGame()
     {
         Debug.Log("Dam");
