@@ -67,4 +67,13 @@ public class CoroutineBehaviour : MonoBehaviour
             repeatUntilFalseEvent.Invoke();
         }
     }
+    
+     
+
+    public UnityEvent EndCountEvent
+    {
+        get => endCountEvent;
+        set => endCountEvent = value;
+        
+    }
 }

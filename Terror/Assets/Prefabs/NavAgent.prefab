@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5997244545198913445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.8, y: 1.4, z: 30.3}
-  m_LocalScale: {x: 1, y: 0.8, z: 0.8}
+  m_LocalPosition: {x: -2.8034, y: 7.8466, z: 30.303}
+  m_LocalScale: {x: 0.03524747, y: 0.033199593, z: 0.041562356}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5997244545198913445}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 8049256592505671898, guid: b490ba2963cb1284eb0db6a4f2545437, type: 3}
 --- !u!23 &5997244545198913446
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98,8 +98,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4413525
-  m_Center: {x: 0.011597991, y: -0.017647818, z: 0.0043762103}
+  m_Radius: 27.33948
+  m_Center: {x: 1.2231312, y: 8.364174, z: 0.004377365}
 --- !u!195 &5997244545198913444
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5997244545198913445}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 9.56
   m_Speed: 2
   m_Acceleration: 4
   avoidancePriority: 50
@@ -118,7 +118,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
+  m_Height: 15.22
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
