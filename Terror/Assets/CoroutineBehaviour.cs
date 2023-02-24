@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class CoroutineBehaviour : MonoBehaviour
 {
@@ -26,7 +28,18 @@ public class CoroutineBehaviour : MonoBehaviour
         startEvent.Invoke();
         wfsObj = new WaitForSeconds(seconds);
         wffuObj = new WaitForFixedUpdate();
+        counterNum.value = Random.Range(0f,30f);
 
+
+    }
+
+    public void FixedUpdate()
+    {
+        StartCounting();
+        if (counterNum.value == 0)
+        {
+            endCountEvent.Invoke();
+        }
     }
 
     public void StartCounting()
@@ -43,13 +56,12 @@ public class CoroutineBehaviour : MonoBehaviour
         yield return wfsObj;
         while (counterNum.value > 0)
         {  
-            
+            Debug.Log("Running");
             repeatCountEvent.Invoke();
             counterNum.value--;
             yield return wfsObj;
             
         }
-        endCountEvent.Invoke();
 
     }
 
